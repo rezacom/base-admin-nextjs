@@ -6,3 +6,4 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - [Tailwind Documentation](https://tailwindcss.com/) - Tailwind v 4.
 - [Next Intl](https://next-intl.dev/) - Multi Language.
 - [Next Theme](https://github.com/pacocoursey/next-themes/) - Multi Theme.
+- [Material Ui](https://mui.com/) - Material Ui v 7.

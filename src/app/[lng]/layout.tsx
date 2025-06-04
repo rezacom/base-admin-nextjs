@@ -4,6 +4,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "next-themes";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
 import "../globals.css";
 
@@ -40,7 +41,9 @@ export default async function RootLayout({
     <html lang={lng} data-theme="dark">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+            <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          </AppRouterCacheProvider>
         </ThemeProvider>
       </body>
     </html>
