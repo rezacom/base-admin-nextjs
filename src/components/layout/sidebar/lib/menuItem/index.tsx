@@ -10,7 +10,7 @@ import clsx from "clsx";
 function MenuItem({ id, title, icon: Icon, link, submenus }: T.MenuItemComponent) {
   const pathname = usePathname();
   const isActive = pathname === link || (submenus && submenus.some((submenu) => submenu.link === pathname));
-  const [isOpen, setIsOpen] = useState(isActive || false);
+  const [isOpen, setIsOpen] = useState(isActive);
 
   return (
     <li key={id}>

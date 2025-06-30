@@ -2,12 +2,16 @@ import React from "react";
 
 import menus from "./data";
 import MenuItem from "./lib/menuItem";
+import { Params } from "next/dist/server/request/params";
+import clsx from "clsx";
 
-function Sidebar({ lng }: { lng: string }) {
+function Sidebar({ lng }: { lng: Params["lng"] }) {
   return (
     <aside
-      id="logo-sidebar"
-      className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+      id="sidebarDashboard"
+      className={clsx(
+        "fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+      )}
       aria-label="Sidebar"
     >
       <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">

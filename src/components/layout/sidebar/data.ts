@@ -1,7 +1,8 @@
 import SpaceDashboardIcon from "@mui/icons-material/SpaceDashboard";
 import PhotoSizeSelectActualIcon from "@mui/icons-material/PhotoSizeSelectActual";
+import { Params } from "next/dist/server/request/params";
 
-const menus = (lng: string) => [
+const menus = (lng: Params["lng"]) => [
   {
     title: "Dashboard",
     link: `/${lng}/dashboard`,
