@@ -1,4 +1,5 @@
 import ThemeSwitcher from "@/components/themeSwitcher";
+import Image from "next/image";
 import React from "react";
 
 function Header() {
@@ -30,7 +31,7 @@ function Header() {
               </svg>
             </button>
             <a href="https://flowbite.com" className="flex ms-2 md:me-24">
-              <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 me-3" alt="FlowBite Logo" />
+              <Image src="/vercel.svg" className="h-8 me-3" alt="FlowBite Logo" width={35} height={35} />
               <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
                 Flowbite
               </span>

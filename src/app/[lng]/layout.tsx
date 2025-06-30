@@ -38,8 +38,8 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={lng} data-theme="dark">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang={lng} className="h-full">
+      <body className={`${geistSans.variable} ${geistMono.variable} h-full`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <NextIntlClientProvider>{children}</NextIntlClientProvider>
