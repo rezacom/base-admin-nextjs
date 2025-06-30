@@ -18,3 +18,13 @@ export interface AppButtonComponent extends ButtonProps {
 export interface TextInputComponent extends TextFieldProps {
   id?: string;
 }
+
+export interface MenuItemComponent {
+  title: string;
+  link?: string;
+  id?: number;
+  icon?:
+    | React.ComponentType<React.SVGProps<SVGSVGElement>>
+    | (OverridableComponent<SvgIconTypeMap<object, "svg">> & { muiName: string });
+  submenus?: MenuItemComponent[];
+}
